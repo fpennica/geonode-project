@@ -1,0 +1,64 @@
+/* fix for featured datasets block exceeding page width */
+/*
+#showcase .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+*/
+
+/* navbar logo */
+.navbar-brand {
+    /* width: 160px; */
+    /* height: 72px; */
+    background: transparent url("../img/labgis02.png") no-repeat;
+    background-size: contain;
+    background-position-y: center;
+}
+
+/* resets navbar color to the default color plus transparency
+   and adjust wrap */
+.navbar-inverse {
+    background-color: #333333 !important;
+    /* background-color: rgba(52, 58, 64, 0.9) !important;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px); */
+}
+/*
+#wrap {
+    margin-top: 10px;
+}
+*/
+
+/* rules to make jumbotron similar to the admin panel settings */
+.home .jumbotron .container {
+    position: relative;
+    z-index: 1;
+}
+.home .jumbotron::after {
+    content: "";
+    background-image: url("../img/igag_geoportal_bg.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.perspective3d {
+  perspective: 100px;
+}
+
+.zoom3d {
+  transition: transform .4s;
+  box-shadow: 0 .3rem .7rem rgba(0,0,0,.5);
+}
+
+.zoom3d:hover {
+  transform: rotateX(1.5deg) scale(1.07);
+  box-shadow: 0 .5rem .9rem rgba(0,0,0,.5);
+}
